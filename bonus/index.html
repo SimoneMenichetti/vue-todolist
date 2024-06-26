@@ -29,7 +29,7 @@
                 <button id="add-task-button" @click="addTask">Aggiungi</button>
                
             </div>
-            <div class="error" v-if ="inputError">
+            <div class="error" v-if="inputError">
                 <small style="color: #911400">Inserisci una Task di almeno 5 caratteri</small>
             </div>
         </div>
@@ -40,8 +40,8 @@
             <ul>
                 <!-- Le task aggiunte appariranno qui -->
                     <!-- utilizziamo v for per stampare iterando nell tasks in maniera dinamica  -->
-                <li v-for="(task, indice) in tasks" :key="indice" class="task">
-                    {{task.text}}
+                    <li v-for="(task, index) in tasks" :key="index" class="task">
+                        <span :class="{done:task.done}" @click="toggleDone(task)">{{ task.text }}</span>
                     <!-- agganciamo l eventlistener al click x la rimozione task da index-->
                     <i class="fa-solid fa-xmark" @click="removeTask(indice)"></i>
                 </li>

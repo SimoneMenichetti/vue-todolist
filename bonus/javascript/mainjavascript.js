@@ -30,17 +30,17 @@ createApp ({
 
                 { 
                 text: 'Compra il succo di murloc',
-                done: false 
+                done:false,
                 },
 
                 {
                 text: 'Vai di mainquest',
-                done: false
+                done: false,
                 },
 
                 {
                 text: 'Studia le recipe di enginering',
-                done: false
+                done: false,
                 }
             ]
             
@@ -50,24 +50,24 @@ createApp ({
 
     methods:{
 
-        addTask(){
-            // condizione di check validità input user
-            if(this.newTask !==''&& this.newTask.length >= 5){
-                // unshift metodo per inserire le new task come primo indice in successione
-                this.tasks.unshift(this.newTask);
-                inputError= false;
-            }else{
-                inputError= true;
+        addTask() {
+            if (this.newTask !== '' && this.newTask.length >= 5) {
+                this.tasks.unshift({ text: this.newTask, done: false });
+                this.inputError = false;
+            } else {
+                this.inputError = true;
             }
-            
-            // inseriamo il proced per svuotare il valore  delle newtask 
-            this.newTask='';
-
+            this.newTask = '';
         },
+        
         removeTask(index){
             // console.log(index);
             this.tasks.splice(index, 1);
+        },
+        toggleDone(task) {
+            task.done = !task.done;
         }
+    
 
     },
 

@@ -93,6 +93,10 @@ li{
     /* list-style-type: none; */
     color:#A87130;
     border-bottom: solid black 1px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 0;
 }
 
 .task-item {
@@ -125,4 +129,9 @@ li{
 .task-item.done {
     text-decoration: line-through;
     color: #aaa;
+}
+
+.input-error {
+    color: red;
+    margin-top: 10px;
 }
