@@ -13,6 +13,18 @@ body {
     background-color: #000000;
 }
 
+h1{
+    color: #A87130;
+    font-style: italic;
+    font-weight: lighter;
+}
+
+i {
+    color: #911400;
+    text-align: right;
+    
+}
+
 .todo-container {
     background:#20150F;
     padding: 20px;
@@ -63,8 +75,6 @@ body {
     background: #7a1101;
 }
 
-
-
 .tasks-container {
     display: flex;
     justify-content: center;
@@ -77,7 +87,7 @@ body {
 }
 
 li{
-    list-style-type: none;
+    /* list-style-type: none; */
     color:#A87130;
 }
 

@@ -6,7 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>vue-todolist</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./css/style.css" />
+    
     <!-- script Vue -->
     <script src='https://unpkg.com/vue@3/dist/vue.global.js'></script>
 </head>
@@ -14,6 +18,7 @@
     <div id="app">
         <div class="mainlogo">
             <img src="https://qph.cf2.quoracdn.net/main-qimg-5ae708f347193a447e0271cfd8254ed5" alt="Logo" class="logo">
+            <h1>TODOLIST</h1>
         </div>
         <div  class="todo-container">
             <div class="input-section">
@@ -24,12 +29,16 @@
         
         <!-- sezione Tasks -->
         
-            <div class="tasks-container" id="tasks-container">
-                <ul>
-                    <li></li>
-                </ul>
+        <div class="tasks-container" id="tasks-container">
+            <ul>
                 <!-- Le task aggiunte appariranno qui -->
-            </div>
+                <li v-for="(task, index) in tasks" :key="index" class="task">
+                    {{task.text}}
+                    <i class="fa-solid fa-xmark"></i>
+                </li>
+            </ul>
+                
+        </div>
        
     </div>
 
