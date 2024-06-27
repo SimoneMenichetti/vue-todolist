@@ -118,17 +118,18 @@ li{
     cursor: pointer;
 }
 
-.task-item .mark-done {
+/* .task-item .mark-done {
     background: none;
     border: none;
-    color: #28a745;
+    
     font-size: 16px;
     cursor: pointer;
-}
+} */
 
-.task-item.done {
+.done {
     text-decoration: line-through;
-    color: #aaa;
+    color:#A87130;
+    cursor: pointer;
 }
 
 .input-error {

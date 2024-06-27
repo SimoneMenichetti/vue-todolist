@@ -67,8 +67,6 @@ createApp ({
         toggleDone(task) {
             task.done = !task.done;
         }
-    
-
     },
 
 }).mount('#app');
